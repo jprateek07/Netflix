@@ -10,19 +10,19 @@ function Navbar() {
   <div className="collapse navbar-collapse" id="navbarText">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item ">
-        <a className={`${Style.navtext} nav-link`} href="#">Home</a>
+        <a className={`${Style.navtext} nav-link`} href="#home">Home</a>
       </li>
       <li className="nav-item">
-        <a className={`${Style.navtext} nav-link`} href="#">TV Shows</a>
+        <a className={`${Style.navtext} nav-link`} href="#tv">TV Shows</a>
       </li>
       <li className="nav-item">
-        <a className={`${Style.navtext} nav-link`} href="#">Movies</a>
+        <a className={`${Style.navtext} nav-link`} href="#movies">Movies</a>
       </li>
       <li className="nav-item">
-        <a className={`${Style.navtext} nav-link`} href="#">Originals</a>
+        <a className={`${Style.navtext} nav-link`} href="#originals">Originals</a>
       </li>
       <li className="nav-item">
-        <a className={`${Style.navtext} nav-link`} href="#">Recently Added</a>
+        <a className={`${Style.navtext} nav-link`} href="#movies">Recently Added</a>
       </li>
       <li className="nav-item">
         <a className={`${Style.navtext} nav-link`} href="#">Portfolio</a>
