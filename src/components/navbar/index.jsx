@@ -25,7 +25,7 @@ function Navbar() {
             <a className={`${Style.navtext} nav-link`} href="#movies">Recently Added</a>
           </li>
           <li className="nav-item">
-            <a className={`${Style.navtext} nav-link`} href="#">Portfolio</a>
+            <a className={`${Style.navtext} nav-link`} href="#home">Portfolio</a>
           </li>
         </ul>
         <span className="navbar-text">

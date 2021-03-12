@@ -40,7 +40,7 @@ p{
 }
 
 @media only screen and (max-width: 600px)  {
-    .playbutton{
+.playbutton{
         position: absolute;
         top: -50px;
         left: -35px;
@@ -50,7 +50,7 @@ p{
         border: none;
         font-size: 12px;
     }   
-    .infobutton{
+.infobutton{
         position: absolute;
         top: -10px;
         left: -35px;
