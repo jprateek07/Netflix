@@ -22,7 +22,7 @@ function VideoSection() {
 
     return (
         <>
-            <div className={Styles.wrapper}>
+            <div className={Styles.wrapper} id="home">
                 <section className={Styles['main-container']}>
                     <div className={Styles.location} id={Styles.home}>
                         <h1 id={Styles.home}>Popular on Netflix</h1>
@@ -42,15 +42,15 @@ function VideoSection() {
                             ))
                         }
                     </div>
-                    <h1 id={Styles.tvShows}>TV Shows</h1>
-                    <div className={Styles.box}>
+                    <h1 id="tv">TV Shows</h1>
+                    <div className={Styles.box} >
                         {dataToPopulate && dataToPopulate.Search &&
                             dataToPopulate.Search.map((data, index) => (
                                 <a key={`tv${index}`} ><img src={data.Poster} alt={data.title} /></a>
                             ))
                         }
                     </div>
-                    <h1 id={Styles.movies} >Blockbuster Action &amp; Adventure</h1>
+                    <h1 id="movies">Blockbuster Action &amp; Adventure</h1>
                     <div className={Styles.box}>
                         {dataToPopulate && dataToPopulate.Search &&
                             dataToPopulate.Search.map((data, index) => (
@@ -58,7 +58,7 @@ function VideoSection() {
                             ))
                         }
                     </div>
-                    <h1 id={Styles.originals}>Netflix Originals</h1>
+                    <h1 id="originals">Netflix Originals</h1>
                     <div className={Styles.box}>
                         {dataToPopulate && dataToPopulate.Search &&
                             dataToPopulate.Search.map((data, index) => (
