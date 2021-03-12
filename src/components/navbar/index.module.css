@@ -1,0 +1,16 @@
+img{
+    width: 150px;
+}
+.navtext {
+    font-size: 1.2rem !important;
+    color: white !important;
+}
+.navtext:hover{
+    color: red!important;
+}
+.navbg{
+    background-color: black;
+}
+.navbg:hover{
+    color: red!important;
+}
