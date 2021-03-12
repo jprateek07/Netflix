@@ -14,3 +14,6 @@ img{
 .navbg:hover{
     color: red!important;
 }
+.navbar{
+    position: fixed;
+}
