@@ -14,3 +14,23 @@ img{
 .navbg:hover{
     color: red!important;
 }
+.account{
+    font-size: 1.2rem !important;
+    color: white !important;
+
+}
+
+.account:hover{
+    color: red!important;
+}
+.accmenu{
+    position: absolute;
+    position: absolute;
+    left: -140px;
+    right: -12px;
+    top: 43px;
+    background-color: black;
+}
+.accinfo:hover {
+    color:red;
+}

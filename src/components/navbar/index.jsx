@@ -38,7 +38,16 @@ function Navbar() {
               <a className={`${Style.navtext} nav-link`} href="#"><i className="fa fa-bell"></i></a>
             </li>
             <li className="nav-item">
-              <a className={`${Style.navtext} nav-link`} href="#">Account</a>
+            <div className="dropdown">
+                <button className={`${Style.account} btn dropdown-toggle`} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Account
+                  </button>
+                <div className={`${Style.accmenu} dropdown-menu`} aria-labelledby="dropdownMenuButton">
+                  <a className={`${Style.accinfo} dropdown-item`}>PRTAEEK NALWAYA</a>
+                  <a className={`${Style.accinfo} dropdown-item`}>MY ACCOUNT</a>
+                  <a className={`${Style.accinfo} dropdown-item`}>LOG OUT</a>
+                </div>
+              </div>
             </li>
           </ul>
         </span>
