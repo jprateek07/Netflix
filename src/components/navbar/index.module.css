@@ -14,14 +14,23 @@ img{
 .navbg:hover{
     color: red!important;
 }
+.search{
+    font-size: 1.2rem !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+.search:hover{
+    color: red !important;
+}
 .account{
     font-size: 1.2rem !important;
     color: white !important;
+    box-shadow: none !important;
 
 }
 
 .account:hover{
-    color: red!important;
+    color: red !important;
 }
 .accmenu{
     position: absolute;
@@ -30,7 +39,12 @@ img{
     right: -12px;
     top: 43px;
     background-color: black;
+    color: red;
+}
+.accinfo{
+    font-weight: bold !important;
+    color:white !important;
 }
 .accinfo:hover {
-    color:red;
+    color: red !important;
 }
