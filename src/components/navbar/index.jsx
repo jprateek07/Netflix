@@ -2,8 +2,22 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import Style from './index.module.css'
 import {usestate} from 'react'
+import $ from 'jquery';
 function Navbar() {
   const [searchTerm, setSearchTerm] =useState('')
+  useEffect(() => {
+    $('.form-search').on('submit', function() {
+        return false;
+    });
+    $('.form-search .btn').on('click', function(e) {
+        // var query = $.trim($(this).prevAll('.search-query').val()).toLowerCase();
+        $('div.movies').each(function() {
+            var $this = $(this);
+            if ($this.text().toLowerCase().indexOf(searchTerm) === -1) $this.closest('div.movies').fadeOut();
+            else $this.closest('div.movies').fadeIn();
+        });
+    });
+});
   return (
     <nav className={`${Style.navbg} navbar navbar-expand-lg navbar-dark`}>
       <a className="navbar-brand" href="#"><img src="../assets/img/logo movie.png" alt="Logo" /></a>
@@ -21,8 +35,8 @@ function Navbar() {
           </ul>
           <span className="navbar-text">
             <ul className="navbar-nav mr-auto">
-              <form className="form-inline my-2 my-lg-0">
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(event) => {setSearchTerm(event.target.value)}} />
+            <form className="form-inline my-2 my-lg-0 form-search">
+                <input className="form-control mr-sm-2 search-query" type="search" placeholder="Search" aria-label="Search" onChange={(event) => {setSearchTerm(event.target.value)}} />
                 <button className={`${Style.search} btn my-2 my-sm-0`} type="submit"><i class="fa fa-search"></i>Search</button>
               </form>
               <li className="nav-item"><a className={`${Style.navtext} nav-link`} href="#"><i className="fa fa-bell"></i></a></li>
