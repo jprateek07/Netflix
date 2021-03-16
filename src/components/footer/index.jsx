@@ -31,7 +31,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="footer-bottom py-3 py-md-4">
-                    <h2 className="text-center">Netflix &copy; All rights reserved.</h2>
+                    <h2 className="text-center">Movielia &copy; All rights reserved.</h2>
                 </div>
             </div>
         </>
