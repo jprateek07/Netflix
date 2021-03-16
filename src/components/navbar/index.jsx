@@ -4,6 +4,15 @@ import Style from './index.module.css'
 import {usestate} from 'react'
 function Navbar() {
   const [searchTerm, setSearchTerm] =useState('')
+  function store(){
+    alert("as")
+  var userEmail = document.getElementById('email');
+  var userPwd = document.getElementById('pw');
+  if(userEmail.value!=null && userPwd.value!=null ){
+   localStorage.setItem('email', userEmail.value);
+   localStorage.setItem('pw', userPwd.value);
+  }
+}
   return (
     <nav className={`${Style.navbg} navbar navbar-expand-lg navbar-dark`}>
       <a className="navbar-brand" href="#"><img src="../assets/img/logo movie.png" alt="Logo" /></a>
@@ -27,13 +36,32 @@ function Navbar() {
               </form>
               <li className="nav-item"><a className={`${Style.navtext} nav-link`} href="#"><i className="fa fa-bell"></i></a></li>
               <li className="nav-item">
-                <div className="dropdown">
-                  <button className={`${Style.account} btn dropdown-toggle`} type="button" id="dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</button>
-                    <div className={`${Style.accmenu} dropdown-menu`} aria-labelledby="dropDown">
-                      <a className={`${Style.accinfo} dropdown-item`}>PRTAEEK NALWAYA</a>
-                      <a className={`${Style.accinfo} dropdown-item`}>MY ACCOUNT</a>
-                      <a className={`${Style.accinfo} dropdown-item`}>LOG OUT</a>
-                    </div>
+              <button type="button" className={`${Style.account} btn`} data-toggle="modal" data-target="#exampleModal"><i className="fa fa-user"></i> Login</button>
+                <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                       <h6 className="modal-title" id="exampleModalLabel">User Profile</h6>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div className={`${Style.imguser} userphoto`}>
+                         <img src="../assets/img/user.png" alt="Avatar" class="avatar" />
+                      </div>  
+                      <div className={`${Style.details} logindetails`}>
+                        <label for="uname"><b>Useremail</b></label>
+                        <input className={`${Style.intext} text`} type="text" id="email" placeholder="Enter Username" name="uname" required />
+                       <div>
+                       <label for="psw"><b>Password</b></label>
+                        <input className={`${Style.intext} text`}type="password" id="pw" placeholder="Enter Password" name="psw" required />
+                       </div>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" onClick={()=>{store()}} className={`${Style.login} btn btn-danger`}>Login</button>
+                      </div>
+                   </div>
+                  </div>
                 </div>
               </li>
             </ul>
