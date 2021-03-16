@@ -24,12 +24,14 @@ function VideoSection() {
         <>
             <div className={Styles.wrapper} id="home">
                 <section className={Styles['main-container']}>
-                    <div className={Styles.location} id={Styles.home}>
+                    <div className="location" id={Styles.home}>
                         <h1 id={Styles.home}>Popular on Netflix</h1>
                         <div className={Styles.box}>
                             {movies && movies.Search &&
                                 movies.Search.map((data, index) => (
+                                    <div id={data.title}>
                                     <a key={`popluar${index}`} ><img src={data.Poster} alt={data.title} /></a>
+                                    </div>
                                 ))
                             }
                         </div>
@@ -38,7 +40,9 @@ function VideoSection() {
                     <div className={Styles.box}>
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
+                                <div id={data.title}>
                                 <a key={`trending${index}`} ><img src={data.Poster} alt={data.title} /></a>
+                                </div>
                             ))
                         }
                     </div>
@@ -46,7 +50,9 @@ function VideoSection() {
                     <div className={Styles.box} >
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
+                                <div id={data.title}>
                                 <a key={`tv${index}`} ><img src={data.Poster} alt={data.title} /></a>
+                                </div>
                             ))
                         }
                     </div>
@@ -54,7 +60,9 @@ function VideoSection() {
                     <div className={Styles.box}>
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
+                                <div id={data.title}>
                                 <a key={`blog${index}`}><img src={data.Poster} alt={data.title} /></a>
+                                </div>
                             ))
                         }
                     </div>
@@ -62,7 +70,9 @@ function VideoSection() {
                     <div className={Styles.box}>
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
+                                <div id={data.title}>
                                 <a key={`netflix${index}`} ><img src={data.Poster} alt={data.title} /></a>
+                                </div>
                             ))
                         }
                     </div>
