@@ -4,15 +4,20 @@ import Style from './index.module.css'
 import {usestate} from 'react'
 function Navbar() {
   const [searchTerm, setSearchTerm] =useState('')
+  const [name, setName]=useState('')
   function store(){
-    alert("as")
   var userEmail = document.getElementById('email');
   var userPwd = document.getElementById('pw');
   if(userEmail.value!=null && userPwd.value!=null ){
    localStorage.setItem('email', userEmail.value);
    localStorage.setItem('pw', userPwd.value);
+    setName(userEmail)
   }
 }
+useEffect(()=>{
+  let userName =localStorage.getItem("email");
+  setName(userName)
+}, [name])
   return (
     <nav className={`${Style.navbg} navbar navbar-expand-lg navbar-dark`}>
       <a className="navbar-brand" href="#"><img src="../assets/img/logo movie.png" alt="Logo" /></a>
@@ -32,10 +37,11 @@ function Navbar() {
             <ul className="navbar-nav mr-auto">
               <form className="form-inline my-2 my-lg-0">
                 <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(event) => {setSearchTerm(event.target.value)}} />
-                <button className={`${Style.search} btn my-2 my-sm-0`} type="submit"><i class="fa fa-search"></i>Search</button>
+                <button className={`${Style.search} btn my-2 my-sm-0`} type="submit"><i className="fa fa-search"></i>Search</button>
               </form>
               <li className="nav-item"><a className={`${Style.navtext} nav-link`} href="#"><i className="fa fa-bell"></i></a></li>
-              <li className="nav-item">
+              { !name ? <li className="nav-item">
+               
               <button type="button" className={`${Style.account} btn`} data-toggle="modal" data-target="#exampleModal"><i className="fa fa-user"></i> Login</button>
                 <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog" role="document">
@@ -47,23 +53,32 @@ function Navbar() {
                         </button>
                       </div>
                       <div className={`${Style.imguser} userphoto`}>
-                         <img src="../assets/img/user.png" alt="Avatar" class="avatar" />
+                         <img src="../assets/img/user.png" alt="Profile Image" className="profile" />
                       </div>  
                       <div className={`${Style.details} logindetails`}>
                         <label for="uname"><b>Useremail</b></label>
-                        <input className={`${Style.intext} text`} type="text" id="email" placeholder="Enter Username" name="uname" required />
+                        <input className={`${Style.intext} text`} type="text" id="email" placeholder="Enter Useremail" name="uemail" required />
                        <div>
                        <label for="psw"><b>Password</b></label>
                         <input className={`${Style.intext} text`}type="password" id="pw" placeholder="Enter Password" name="psw" required />
                        </div>
                       </div>
                       <div className="modal-footer">
-                        <button type="button" onClick={()=>{store()}} className={`${Style.login} btn btn-danger`}>Login</button>
+                        <button type="button" onClick={()=>{store()}} data-dismiss="modal" className={`${Style.login} btn btn-danger`}>Login</button>
                       </div>
                    </div>
                   </div>
                 </div>
-              </li>
+              </li> :  <div className="dropdown">
+                  <button className={`${Style.account} btn dropdown-toggle`} type="button" id="dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</button>
+                    <div className={`${Style.accmenu} dropdown-menu`} aria-labelledby="dropDown">
+                      <a className={`${Style.accinfo} dropdown-item`}>PRTAEEK NALWAYA</a>
+                      <a className={`${Style.accinfo} dropdown-item`}>MY ACCOUNT</a>
+                      <a className={`${Style.accinfo} dropdown-item`}>LOG OUT</a>
+                    </div>
+                </div>
+              
+              }
             </ul>
           </span>
         </div>
