@@ -58,7 +58,7 @@ function VideoSection() {
                             ))
                         }
                     </div>
-                    <h1 id="finalSection">Netflix Originals</h1>
+                    <h1 id="netflix-originals">Netflix Originals</h1>
                     <div className={Styles.box}>
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
