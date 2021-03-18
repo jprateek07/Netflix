@@ -6,7 +6,11 @@ function App () {
   return (
     <Layout>
       <Landingscreen />
-      <Videosection />
+      <Videosection header="Popular on Netflix" id="popular"/>
+      <Videosection header="Trending Now"  id="trending"/>
+      <Videosection header="TV Shows"  id="tv"/>
+      <Videosection header="Blockbuster Action &amp; Adventure" id="blockbuster"/>
+      <Videosection header="Netflix Originals" id="originals"/>
     </Layout>
   )
 }

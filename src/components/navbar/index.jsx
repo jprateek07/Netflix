@@ -13,6 +13,7 @@ function Navbar() {
         // var query = $.trim($(this).prevAll('.search-query').val()).toLowerCase();
         $('div.movies').each(function() {
             var $this = $(this);
+            console.log($this)
             if ($this.text().toLowerCase().indexOf(searchTerm) === -1) $this.closest('div.movies').fadeOut();
             else $this.closest('div.movies').fadeIn();
         });

@@ -37,6 +37,7 @@ code {
   transition: 0.3s;
   width: 235px;
   margin: 15px 7.5px;
+  background-color: #141414;
 }
 
 .card:hover {
