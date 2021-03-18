@@ -10,33 +10,41 @@ function Landingpage() {
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
       </ol>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie1.jpg" height={700} alt="First slide" />
+          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie1.jpg" height={700} alt="" />
             <div className={`${Style.info} carousel-caption d-none d-md-block`}>
               <h5>MONEY HEIST</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
             </div>
         </div>
         <div className="carousel-item">
-          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie2.jpg" height={700} alt="Third slide" />
+          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie2.jpg" height={700} alt=" " />
             <div className={`${Style.info} carousel-caption d-none d-md-block`}>
               <h5>LUCIFER</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
             </div>
         </div>
         <div className="carousel-item">
-          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie3.jpg" height={700} alt="Third slide" />
+          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie3.jpg" height={700} alt="" />
             <div className={`${Style.info} carousel-caption d-none d-md-block`}>
               <h5>GAME OF THRONES</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
             </div>
         </div>
         <div className="carousel-item">
-          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie4.jpg" height={700} alt="Second slide" />
+          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie4.jpg" height={700} alt="" />
             <div className={`${Style.info} carousel-caption d-none d-md-block`}>
               <h5>THE WITCHER</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div className="carousel-item">
+          <img className={`${Style.images} d-block w-100`} src="../assets/img/movie5.jpg" height={700} alt="" />
+            <div className={`${Style.info} carousel-caption d-none d-md-block`}>
+              <h5>RIVERDALE</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
             </div>
         </div>

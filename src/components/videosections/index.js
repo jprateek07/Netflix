@@ -29,7 +29,8 @@ function VideoSection() {
                         <div className={Styles.box}>
                             {movies && movies.Search &&
                                 movies.Search.map((data, index) => (
-                                    <div className="movies"><a key={`popluar${index}`} ><img src={data.Poster} alt={data.Title} /></a><p>{data.Title}</p></div>
+                                    <div className="movies"><a key={`popluar${index}`} ><img src={data.Poster} alt={data.Title} 
+                                    onError={(e)=>{e.target.onerror = null; e.target.src="/assets/img/default1.jpg"}} /></a><p>{data.Title}</p></div>
                                 ))
                             }
                         </div>
@@ -38,7 +39,8 @@ function VideoSection() {
                     <div className={Styles.box}>
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
-                                <div className="movies"><a key={`trending${index}`} ><img src={data.Poster} alt={data.Title} /></a><p>{data.Title}</p></div>
+                                <div className="movies"><a key={`trending${index}`} ><img src={data.Poster} alt={data.Title}
+                                onError={(e)=>{e.target.onerror = null; e.target.src="/assets/img/default1.jpg"}} /></a><p>{data.Title}</p></div>
                             ))
                         }
                     </div>
@@ -46,7 +48,8 @@ function VideoSection() {
                     <div className={Styles.box} >
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
-                               <div className="movies"><a key={`tv${index}`} ><img src={data.Poster} alt={data.Title} /></a><p>{data.Title}</p></div>
+                               <div className="movies"><a key={`tv${index}`} ><img src={data.Poster} alt={data.Title} 
+                               onError={(e)=>{e.target.onerror = null; e.target.src="/assets/img/default1.jpg"}} /></a><p>{data.Title}</p></div>
                             ))
                         }
                     </div>
@@ -54,7 +57,8 @@ function VideoSection() {
                     <div className={Styles.box}>
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
-                                <div className="movies"><a key={`blog${index}`}><img src={data.Poster} alt={data.Title} /></a><p>{data.Title}</p></div>
+                                <div className="movies"><a key={`blog${index}`}><img src={data.Poster} alt={data.Title} 
+                                onError={(e)=>{e.target.onerror = null; e.target.src="/assets/img/default1.jpg"}} /></a><p>{data.Title}</p></div>
                             ))
                         }
                     </div>
@@ -62,7 +66,8 @@ function VideoSection() {
                     <div className={Styles.box}>
                         {movies && movies.Search &&
                             movies.Search.map((data, index) => (
-                                <div className="movies"><a key={`netflix${index}`} ><img src={data.Poster} alt={data.Title} /></a><p>{data.Title}</p></div>
+                                <div className="movies"><a key={`netflix${index}`} ><img src={data.Poster} alt={data.Title} 
+                                onError={(e)=>{e.target.onerror = null; e.target.src="/assets/img/default1.jpg"}} /></a><p>{data.Title}</p></div>
                             ))
                         }
                     </div>
