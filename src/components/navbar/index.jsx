@@ -74,7 +74,7 @@ useEffect(()=>{
                   </div>
                 </div>
               </li> :  <div className="dropdown">
-                  <button className={`${Style.account} btn dropdown-toggle`} type="button" id="dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</button>
+                  <button className={`${Style.account} btn dropdown-toggle`} type="button" id="dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fa fa-user"></i> Account</button>
                     <div className={`${Style.accmenu} dropdown-menu`} aria-labelledby="dropDown">
                       <a className={`${Style.accinfo} dropdown-item`}>PRTAEEK NALWAYA</a>
                       <a className={`${Style.accinfo} dropdown-item`}>MY ACCOUNT</a>
