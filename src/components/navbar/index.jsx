@@ -14,6 +14,10 @@ function Navbar() {
     setName(userEmail)
   }
 }
+const logout = () => {
+  window.localStorage.clear();
+  window.location.href = "login";
+}
 useEffect(()=>{
   let userName =localStorage.getItem("email");
   setName(userName)
@@ -74,7 +78,7 @@ useEffect(()=>{
                     <div className={`${Style.accmenu} dropdown-menu`} aria-labelledby="dropDown">
                       <a className={`${Style.accinfo} dropdown-item`}>PRTAEEK NALWAYA</a>
                       <a className={`${Style.accinfo} dropdown-item`}>MY ACCOUNT</a>
-                      <a className={`${Style.accinfo} dropdown-item`}>LOG OUT</a>
+                      <button onClick={logout} className={`${Style.accinfo} dropdown-item`}>LOG OUT</button>
                     </div>
                 </div>
               
